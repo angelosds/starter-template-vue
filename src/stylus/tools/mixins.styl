@@ -1,0 +1,16 @@
+/**
+ * Mixins
+ */
+
+// Cria a string de configuração de uma media querie com base nas resoluções informadas
+render-media-querie( $min-res, $max-res = null ) {
+	if ( $min-res == 0 && $max-res != null ) {
+		return 'screen and (max-width: ' + $max-res + ')';
+	} else {
+		if ($max-res == null) {
+			return 'screen and (min-width: ' + ($min-res == 0 ? 0 : $min-res + 1) + ')';
+		} else {
+			return 'screen and (min-width: ' + ($min-res == 0 ? 0 : $min-res + 1) + ') and (max-width: ' + $max-res + ')';
+		}
+	}
+}

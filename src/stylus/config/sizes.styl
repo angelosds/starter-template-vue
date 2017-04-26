@@ -1,0 +1,34 @@
+/**
+ * Tamanhos
+ */
+ 
+// Geral
+$gutter = 30px; // Espaçamento entre colunas do grid
+$half-gutter = ($gutter / 2);
+
+// Grid
+$cols = 12;
+$container-width = 1140px;
+
+// Media queries
+$scr-mobile = 480px;
+$scr-tablet = 768px;
+$scr-desktop = 1140px;
+
+$scr-default-prefix = 'xs';
+$scr-mobile-prefix = 'sm';
+$scr-tablet-prefix = 'md';
+$scr-desktop-prefix = 'lg';
+
+$mq-default-mobile = render-media-querie(0, $scr-mobile);
+$mq-default-tablet = render-media-querie(0, $scr-tablet);
+$mq-default-desktop = render-media-querie(0, $scr-desktop);
+
+$mq-mobile = render-media-querie($scr-mobile);
+$mq-mobile-tablet = render-media-querie($scr-mobile, $scr-tablet);
+$mq-mobile-desktop = render-media-querie($scr-mobile, $scr-desktop);
+
+$mq-tablet = render-media-querie($scr-tablet);
+$mq-tablet-desktop = render-media-querie($scr-tablet, $scr-desktop);
+
+$mq-desktop = render-media-querie($scr-desktop);
